@@ -52,13 +52,18 @@
         border-radius: 3px;
         overflow: hidden;
         transition: all .4s;
-        transition-delay: .2s
+        transition-delay: .2s;
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
         vertical-align: middle;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: flex;
+        }
     }
 
     &__right {
@@ -66,11 +71,21 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+            padding: 1.5rem 2rem;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
 
     }
 
